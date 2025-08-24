@@ -160,6 +160,11 @@ function openModal(imageSrc) {
     modal.style.display = 'none'; // Hide the modal
   }
   
+  /*Experience*/
+  /* SCROLL EXPERIENCE */
+srtop.reveal('.experience .heading', { delay: 200 });
+srtop.reveal('.experience .timeline-item', { interval: 200 });
+
 
 /*Certifcates*/
 
