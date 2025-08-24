@@ -56,6 +56,33 @@ header {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 } 
 
+header h1 {
+  display: flex;
+  align-items: center;
+}
+
+header h1 a {
+  display: flex;
+  align-items: center;
+  color: rgb(115, 3, 167);
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+header h1 .profile-pic {
+  width: 40px;         /* adjust size */
+  height: 40px;
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;
+  margin-right: 10px;  /* space between image and name */
+  border: 2px solid rgb(115, 3, 167); /* optional border */
+}
+
+header h1 .site-name {
+  color: rgb(115, 3, 167);
+}
+
+
 section {
   min-height: 100vh;
   padding: 2rem 9%;
@@ -67,7 +94,7 @@ section {
   text-align: center;
 }
 .heading span {
-  color: rgb(115, 3, 167);
+  color: rgb(90, 6, 129);
 }
 header .logo {
   font-size: 1.9rem;
@@ -322,6 +349,7 @@ header .navbar ul li a:hover {
 .about {
   background: #e5ecfb;
 }
+
 .about .row {
   display: flex;
   flex-direction: row;
@@ -430,6 +458,121 @@ header .navbar ul li a:hover {
 }
 /* about media queries ends*/
 /* about section ends */
+
+/*experience */
+.experience {
+  background:url(../../assets/images/bg.png) repeat;
+  background-color:#e5ecfb ;
+  padding: 60px 0;
+}
+
+/* Space after heading */
+.experience h3,
+.experience h4 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b0082;
+  margin-bottom: 20px; /* extra space before timeline */
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px 0;
+}
+
+/* Vertical line in center - Indigo color */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: indigo;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Each item */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* Left and Right alternates */
+.timeline-item.left {
+  left: 0;
+  text-align: left;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Timeline content box */
+.timeline-item .content {
+  background: #fff;
+  padding: 40px 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  font-size: 1.6rem;
+  min-height: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 90%;
+}
+
+/* Hover zoom */
+.timeline-item .content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Text styling */
+.timeline-item .role {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.timeline-item .company {
+  font-size: 1.5rem;
+  color: #4b0082;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.timeline-item .date {
+  font-size: 1.4rem;
+  color: rgb(47, 4, 129);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 10px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item.right {
+    left: 0;
+  }
+  .timeline-item .content {
+    width: 100%;
+  }
+}
+
+/* experience section ends */
+
 
 /* skills section starts */
 
@@ -558,7 +701,8 @@ header .navbar ul li a:hover {
   margin-top: 2rem;
   overflow: hidden;
   transition: 0.3s;
-  background: rgb(252, 252, 252);
+  background:url(../../assets/images/bg.png) repeat;
+  background-color:#e5ecfb ;
 }
 .education .box-container .box:hover {
   transform: scale(1.03);
